@@ -1,0 +1,21 @@
+{
+  "name": "mastia-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "sass": "node-sass -w styles/ -o styles/ --recursive --output-style compressed",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.2.3",
+    "node-sass": "^8.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-owl-carousel": "^2.3.3",
+    "webpack": "^5.75.0"
+  }
+}
