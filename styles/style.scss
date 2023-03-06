@@ -98,14 +98,14 @@ body {
 
     //&_menu
     &_menu {
-      > li {
+      li {
         display: inline-block;
         position: relative;
         margin-right: 25px;
         &:last-child {
           margin-right: 0;
         }
-        > a {
+        a {
           color: $primary_color;
           font-weight: 600;
           font-size: $large_size;
@@ -128,61 +128,6 @@ body {
             &::before {
               width: 100%;
             }
-          }
-          &:not(:only-child):after {
-            padding-left: 1px;
-            content: "▾";
-          }
-        }
-        //dropdown
-        .dropdown {
-          width: 200px;
-          position: absolute;
-          top: 34px;
-          left: 0;
-          z-index: 2;
-          padding: 15px 0 15px 10px;
-          background-color: $three_color;
-          opacity: 0;
-          visibility: hidden;
-          transition: 0.4ms all ease-in-out;
-          li {
-            display: block;
-            padding-bottom: 15px;
-            &:last-child {
-              padding-bottom: 0;
-            }
-            a {
-              color: $base_color;
-              font-weight: 600;
-              font-size: $regular_size;
-              text-transform: uppercase;
-              position: relative;
-              &::before {
-                position: absolute;
-                width: 0;
-                margin: -3px 0;
-                transition: 0.4ms all ease-in-out;
-                content: "";
-                background-color: $two_color;
-                height: 3px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-              }
-              &:hover {
-                color: $two_color;
-                &::before {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-        &:hover {
-          .dropdown {
-            opacity: 1;
-            visibility: visible;
           }
         }
         .active {
@@ -215,15 +160,12 @@ body {
       position: absolute;
       top: 69px;
       right: 0;
+      transition: 0.3s all ease-in-out;
       cursor: pointer;
       z-index: 999;
-      .bar {
-        display: block;
-        width: 35px;
-        height: 3px;
-        margin: 5px auto;
-        transition: 0.3s all ease-in-out;
-        background-color: $two_color;
+      .icon {
+        font-size: 30px;
+        color: $two_color;
       }
     }
 
@@ -260,22 +202,6 @@ body {
               background-color: $two_color;
             }
           }
-          //dropdown
-          .dropdown {
-            width: 100%;
-            top: 30px;
-            padding: 15px 0;
-            li {
-              padding-bottom: 12px;
-              &:last-child {
-                padding-bottom: 0;
-              }
-              a {
-                font-size: 12px;
-                line-height: normal;
-              }
-            }
-          }
         }
       }
       &_menu.open {
@@ -286,18 +212,16 @@ body {
       //&_hamburger
       &_hamburger {
         display: block;
-        &.active .bar {
-          &:nth-child(2) {
-            opacity: 0;
-          }
-          &:nth-child(1) {
-            -webkit-transform: translateY(8px) rotate(45deg);
-            transform: translateY(8px) rotate(45deg);
-          }
-          &:nth-child(3) {
-            -webkit-transform: translateY(-8px) rotate(-45deg);
-            transform: translateY(-8px) rotate(-45deg);
-          }
+        .times {
+          display: none;
+        }
+      }
+      &_hamburger.open {
+        .bars {
+          display: none;
+        }
+        .times {
+          display: block;
         }
       }
     }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import HeaderLogo from "@/public/logo.png";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
@@ -8,8 +9,16 @@ import { AiOutlineGooglePlus } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RxEnvelopeClosed } from "react-icons/rx";
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <>
       <div id="top_header">
@@ -88,7 +97,7 @@ function Header() {
               </Link>
             </div>
             {/*header_logo*/}
-            <ul className="header_menu">
+            <ul className={`header_menu ${isOpen ? "open" : ""}`}>
               <li>
                 <Link href="/">Home</Link>
               </li>
@@ -97,67 +106,24 @@ function Header() {
               </li>
               <li>
                 <Link href="/">Services</Link>
-                <ul className="dropdown">
-                  <li>
-                    <Link href="/">Services - 1</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Services - 2</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Services - 3</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Services - 4</Link>
-                  </li>
-                </ul>
-                {/*dropdown*/}
               </li>
               <li>
                 <Link href="/">Projects</Link>
-                <ul className="dropdown">
-                  <li>
-                    <Link href="/">Projects - 1</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Projects - 2</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Projects - 3</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Projects - 4</Link>
-                  </li>
-                </ul>
-                {/*dropdown*/}
               </li>
               <li>
                 <Link href="/">Blog</Link>
-                <ul className="dropdown">
-                  <li>
-                    <Link href="/">Blog - 1</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Blog - 2</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Blog - 3</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Blog - 4</Link>
-                  </li>
-                </ul>
-                {/*dropdown*/}
               </li>
               <li>
                 <Link href="/">Contact</Link>
               </li>
             </ul>
             {/*header_menu*/}
-            <div className="header_hamburger">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
+            <div
+              className={`header_hamburger ${isOpen ? "open" : ""}`}
+              onClick={toggleMenu}
+            >
+              <FaBars className="icon bars" />
+              <FaTimes className="icon times" />
             </div>
             {/*header_hamburger*/}
           </div>
