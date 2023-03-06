@@ -36,7 +36,7 @@ const responsive = {
   },
 };
 
-import sliderimage from "@/public/1920x750.png";
+import Sliderİmg from "@/public/1920x750.png";
 
 function HomeSlider() {
   return (
@@ -54,10 +54,8 @@ function HomeSlider() {
           responsive={responsive}
         >
           <div className="home_slider_item">
-            <div className="slider_image">
-              <Image className="img-fluid" src={sliderimage} alt="Slider" />
-            </div>
-            <div className="slider_caption">
+            <Image className="img_fluid" src={Sliderİmg} alt="Slider" />
+            <div className="slider_caption container">
               <h6>We care about your business </h6>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -72,10 +70,8 @@ function HomeSlider() {
           </div>
           {/*home_slider_item*/}
           <div className="home_slider_item">
-            <div className="slider_image">
-              <Image className="img-fluid" src={sliderimage} alt="Slider" />
-            </div>
-            <div className="slider_caption">
+            <Image className="img_fluid" src={Sliderİmg} alt="Slider" />
+            <div className="slider_caption container">
               <h6>We care about your business </h6>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
