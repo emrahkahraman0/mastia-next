@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
 
-const servicesDetail = () => {
+const ServicesDetails = () => {
   const router = useRouter();
-  const blogId = router.query.blogId;
+  const ServicesId = router.query.ServicesId;
 
   return (
     <>
-      <div>servicesDetail {blogId}</div>
+      <div>ServicesDetails {ServicesId}</div>
     </>
   );
 };
 
-export default servicesDetail;
+export default ServicesDetails;
