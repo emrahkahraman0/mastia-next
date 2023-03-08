@@ -554,6 +554,31 @@ body {
   .footer {
     //&_item
     &_item {
+      color: $base_color;
+    }
+  }
+}
+
+//Copyright#
+#copyright {
+  width: 100%;
+  padding: 30px 0;
+  background-color: $six_color;
+
+  //text
+  .text {
+    text-align: center;
+    color: $base_color;
+    font-family: $two_family;
+    font-size: $regular_size;
+    line-height: normal;
+  }
+
+  //&_Mobil
+  @include mobil {
+    //text
+    .text {
+      font-size: $small_size;
     }
   }
 }
