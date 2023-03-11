@@ -515,6 +515,190 @@ body {
   }
 }
 
+//Home_Projects#
+#home_projects {
+  width: 100%;
+  padding: 70px 0 120px 0;
+
+  //title
+  .title {
+    font-family: $one_family;
+    text-transform: uppercase;
+    @include weight(400);
+    font-size: 35px;
+    color: $two_color;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+
+    //&_Notebook
+    @include notebook {
+      font-size: 30px;
+    }
+    //&_Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //&_X-Tablet
+    @include x-tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+    //&_Mobil
+    @include mobil {
+      font-size: 20px;
+    }
+  }
+
+  //home_projects
+  .home_projects {
+    position: relative;
+    padding-top: 60px;
+
+    //&_item
+    &_item {
+      position: relative;
+      .project_caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 167, 240, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s all ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        .icon {
+          color: $base_color;
+          font-size: 35px;
+        }
+      }
+      &:hover {
+        .project_caption {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      //Mobil
+      @include mobil {
+        .project_caption {
+          .icon {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    //owl-nav
+    .owl-nav {
+      position: absolute;
+      bottom: -45px;
+      right: 0;
+      .owl-prev,
+      .owl-next {
+        width: 25px;
+        height: 25px;
+        line-height: normal;
+        background-color: $two_color;
+        color: $base_color;
+        font-size: $large_size;
+      }
+      .owl-prev {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+//Home_Counters#
+#home_counters {
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(34, 167, 240, 0.8),
+      rgba(34, 167, 240, 0.8)
+    ),
+    url("../public/1920x230.png");
+  padding: 50px 0 50px 0;
+  background-position: center;
+  background-size: cover;
+  //Large
+  @include large {
+    padding: 50px 0 20px 0;
+  }
+
+  //home_counters
+  .home_counters {
+    text-align: center;
+
+    //&_item
+    &_item {
+      .counter {
+        font-family: $one_family;
+        @include weight(bold);
+        color: $base_color;
+        font-size: 50px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -14px;
+          left: 0;
+          right: 0;
+          width: 40px;
+          height: 2px;
+          margin: 0 auto;
+          background-color: $base_color;
+        }
+      }
+      h6 {
+        padding-top: 35px;
+        font-family: $one_family;
+        @include weight(400);
+        font-size: 22px;
+        line-height: normal;
+        color: $base_color;
+        text-transform: uppercase;
+      }
+      //&_Large
+      @include large {
+        margin-bottom: 30px;
+      }
+      //&_Tablet
+      @include tablet {
+        .counter {
+          font-size: 35px;
+        }
+        h6 {
+          font-size: 18px;
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        .counter {
+          font-size: 30px;
+        }
+        h6 {
+          font-size: $large_size;
+        }
+      }
+    }
+  }
+}
+
 //İnformations#
 #informations {
   width: 100%;

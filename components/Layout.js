@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import İnfo from "./İnfo";
 import Header from "./Header";
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   return (
     <>
       <Header />
@@ -11,6 +11,6 @@ const Layout = ({ children }) => {
       <Footer />
     </>
   );
-};
+}
 
 export default Layout;
