@@ -1,9 +1,9 @@
-const pricings = () => {
+const Pricings = () => {
   return (
     <>
-      <div>pricings</div>;
+      <div>Pricings</div>
     </>
   );
 };
 
-export default pricings;
+export default Pricings;

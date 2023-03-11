@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import HeaderLogo from "@/public/logo.png";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
@@ -13,6 +14,7 @@ import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
 function Header() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleMenu() {
@@ -99,22 +101,52 @@ function Header() {
             {/*header_logo*/}
             <ul className={`header_menu ${isOpen ? "open" : ""}`}>
               <li>
-                <Link href="/">Home</Link>
+                <Link
+                  href="/"
+                  className={router.pathname == "/" ? "active" : ""}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/">About Us</Link>
+                <Link
+                  href="/About"
+                  className={router.pathname == "/About" ? "active" : ""}
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/">Services</Link>
+                <Link
+                  href="/Services"
+                  className={router.pathname == "/Services" ? "active" : ""}
+                >
+                  Services
+                </Link>
               </li>
               <li>
-                <Link href="/">Projects</Link>
+                <Link
+                  href="/Projects"
+                  className={router.pathname == "/Projects" ? "active" : ""}
+                >
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link href="/">Blog</Link>
+                <Link
+                  href="/Blog"
+                  className={router.pathname == "/Blog" ? "active" : ""}
+                >
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link href="/">Contact</Link>
+                <Link
+                  href="/Contact"
+                  className={router.pathname == "/Contact" ? "active" : ""}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
             {/*header_menu*/}

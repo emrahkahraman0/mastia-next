@@ -366,6 +366,69 @@ body {
         }
       }
     }
+
+    //owl-nav
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        width: 70px;
+        height: 70px;
+        line-height: -70px;
+        border: 1px solid $base_color;
+        font-size: 40px;
+        color: $base_color;
+        @include weight(400);
+        background-color: transparent;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          background-color: $two_color;
+          border: 1px solid $two_color;
+        }
+      }
+      .owl-prev {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+      }
+      .owl-next {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+      }
+
+      //Notebook
+      @include notebook {
+        .owl-prev,
+        .owl-next {
+          width: 50px;
+          height: 50px;
+          line-height: normal;
+          font-size: 30px;
+        }
+        .owl-prev {
+          left: 20px;
+        }
+        .owl-next {
+          right: 20px;
+        }
+      }
+      //TAblet
+      @include tablet {
+        .owl-prev,
+        .owl-next {
+          width: 40px;
+          height: 40px;
+          font-size: $large_size;
+          top: 32%;
+        }
+        .owl-prev {
+          left: 0;
+        }
+        .owl-next {
+          right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -549,12 +612,137 @@ body {
   width: 100%;
   padding: 50px 0 50px 0;
   background-color: $five_color;
+  //Large
+  @include large {
+    padding: 50px 0 20px 0;
+  }
 
   //footer
   .footer {
     //&_item
     &_item {
       color: $base_color;
+      p {
+        font-family: $two_family;
+        @include weight(400);
+        font-size: $regular_size;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+        color: $base_color;
+      }
+      h6 {
+        font-family: $one_family;
+        text-transform: uppercase;
+        @include weight(bold);
+        font-size: 20px;
+        line-height: normal;
+        color: $two_color;
+        padding-bottom: 25px;
+      }
+      ul {
+        li {
+          display: block;
+          padding: 0 0 10px 17px;
+          &:last-child {
+            padding: 0 0 0 17px;
+          }
+          a {
+            font-family: $two_family;
+            font-size: $regular_size;
+            @include weight(regular);
+            color: $base_color;
+            position: relative;
+            &::before {
+              content: ">";
+              font-size: $regular_size;
+              @include weight(400);
+              color: $two_color;
+              position: absolute;
+              top: 3px;
+              left: -17px;
+            }
+          }
+        }
+      }
+      //icon_desc
+      .icon_desc {
+        padding-top: 20px;
+        &_item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .icon {
+            font-size: $regular_size;
+            color: $two_color;
+          }
+          h5,
+          a {
+            padding-left: 10px;
+            font-family: $two_family;
+            font-size: $regular_size;
+            color: $base_color;
+          }
+        }
+      }
+
+      //Large
+      @include large {
+        margin-bottom: 30px;
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          font-size: 18px;
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        text-align: center;
+        h6 {
+          font-size: $large_size;
+          padding-bottom: 20px;
+        }
+        .icon_desc {
+          &_item {
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: $regular_size;
+          padding-bottom: 20px;
+        }
+        p {
+          font-size: $small_size;
+          line-height: 16px;
+        }
+        ul {
+          li {
+            padding-bottom: 6px;
+            a {
+              font-size: $small_size;
+              &::before {
+                font-size: $small_size;
+              }
+            }
+          }
+        }
+        .icon_desc {
+          &_item {
+            h5,
+            a {
+              padding-left: 8px;
+              font-size: $small_size;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -572,6 +760,9 @@ body {
     font-family: $two_family;
     font-size: $regular_size;
     line-height: normal;
+    .heart {
+      color: #ff0000;
+    }
   }
 
   //&_Mobil

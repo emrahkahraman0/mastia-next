@@ -7,7 +7,6 @@ import HomeSlider from "@/templates/HomeSlider";
 function Home() {
   return (
     <>
-      <h1>Home</h1>
       <HomeSlider />
       <HomeServices />
       <HomeProjects />
