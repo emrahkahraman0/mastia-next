@@ -30,13 +30,13 @@ const responsive = {
     items: 2,
   },
   1200: {
-    items: 2,
+    items: 3,
   },
   1400: {
-    items: 2,
+    items: 3,
   },
   1600: {
-    items: 2,
+    items: 3,
   },
 };
 
@@ -47,6 +47,7 @@ function HomeBlog() {
     <>
       <div id="home_blog">
         <div className="container">
+          <h6 className="title">from blog</h6>
           <OwlCarousel
             className="home_blog"
             loop
@@ -61,6 +62,58 @@ function HomeBlog() {
           >
             <div className="home_blog_item">
               <Image className="img_fluid" src={Blogİmg} alt="Slider" />
+              <div className="blog_text">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be{" "}
+                </p>
+                <Link href="/Blog" className="read_more">
+                  read more
+                </Link>
+              </div>
+            </div>
+            {/*home_blog_item*/}
+            <div className="home_blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Slider" />
+              <div className="blog_text">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be{" "}
+                </p>
+                <Link href="/Blog" className="read_more">
+                  read more
+                </Link>
+              </div>
+            </div>
+            {/*home_blog_item*/}
+            <div className="home_blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Slider" />
+              <div className="blog_text">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be{" "}
+                </p>
+                <Link href="/Blog" className="read_more">
+                  read more
+                </Link>
+              </div>
+            </div>
+            {/*home_blog_item*/}
+            <div className="home_blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Slider" />
+              <div className="blog_text">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be{" "}
+                </p>
+                <Link href="/Blog" className="read_more">
+                  read more
+                </Link>
+              </div>
             </div>
             {/*home_blog_item*/}
           </OwlCarousel>

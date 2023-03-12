@@ -387,12 +387,12 @@ body {
       }
       .owl-prev {
         position: absolute;
-        top: 50%;
+        top: 46%;
         left: 30px;
       }
       .owl-next {
         position: absolute;
-        top: 50%;
+        top: 46%;
         right: 30px;
       }
 
@@ -412,20 +412,26 @@ body {
           right: 20px;
         }
       }
-      //TAblet
+      //Tablet
       @include tablet {
         .owl-prev,
         .owl-next {
           width: 40px;
           height: 40px;
           font-size: $large_size;
-          top: 32%;
         }
         .owl-prev {
           left: 0;
         }
         .owl-next {
           right: 0;
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        .owl-prev,
+        .owl-next {
+          top: 33%;
         }
       }
     }
@@ -694,6 +700,141 @@ body {
         h6 {
           font-size: $large_size;
         }
+      }
+    }
+  }
+}
+
+//Home_Blog#
+#home_blog {
+  width: 100%;
+  padding: 70px 0 120px 0;
+
+  //title
+  .title {
+    font-family: $one_family;
+    text-transform: uppercase;
+    @include weight(400);
+    font-size: 35px;
+    color: $two_color;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+
+    //&_Notebook
+    @include notebook {
+      font-size: 30px;
+    }
+    //&_Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //&_X-Tablet
+    @include x-tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+    //&_Mobil
+    @include mobil {
+      font-size: 20px;
+    }
+  }
+
+  //home_blog
+  .home_blog {
+    padding-top: 60px;
+
+    //&_item
+    &_item {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      //blog_text
+      .blog_text {
+        padding: 25px 20px;
+        background-color: $seven_color;
+        .date {
+          font-family: $two_family;
+          font-size: $regular_size;
+          line-height: normal;
+          @include weight(400);
+          font-style: italic;
+          color: $three_color;
+        }
+        p {
+          padding-top: 10px;
+          font-family: $two_family;
+          font-size: $regular_size;
+          line-height: 20px;
+          color: $three_color;
+          @include weight(400);
+        }
+        .read_more {
+          display: inline-block;
+          padding-top: 20px;
+          color: $two_color;
+          font-family: $two_family;
+          font-size: $regular_size;
+          line-height: normal;
+          text-transform: uppercase;
+          @include weight(bold);
+        }
+      }
+
+      //&_Tablet
+      @include tablet {
+        //blog_text
+        .blog_text {
+          padding: 20px 15px;
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        //blog_text
+        .blog_text {
+          padding: 15px 10px;
+          .date {
+            font-size: $small_size;
+          }
+          p {
+            font-size: $small_size;
+            line-height: 15px;
+          }
+          .read_more {
+            padding-top: 15px;
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+
+    //owl-nav
+    .owl-nav {
+      position: absolute;
+      bottom: -45px;
+      right: 0;
+      .owl-prev,
+      .owl-next {
+        width: 25px;
+        height: 25px;
+        line-height: normal;
+        background-color: $two_color;
+        color: $base_color;
+        font-size: $large_size;
+      }
+      .owl-prev {
+        margin-right: 5px;
       }
     }
   }
@@ -972,8 +1113,12 @@ body {
 
 ///// BlogDetail /////
 
+///// Teams /////
+
 ///// Pricings /////
 
 ///// Faqs /////
+
+///// 404 /////
 
 ///// Contact /////
