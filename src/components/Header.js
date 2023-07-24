@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import HeaderLogo from "public/logo.png";
 import { LiaBarsSolid } from "react-icons/lia";
 import { VscClose } from "react-icons/vsc";
+import TopBar from "../templates/TopBar";
 
 function Header() {
     //Menü
@@ -40,6 +41,8 @@ function Header() {
     return (
 
         <>
+
+            <TopBar />
 
             <div id="header" className={scroll ? "scroll" : ""}>
 

@@ -18,9 +18,73 @@ body {
   color: $primary_color;
 }
 
-#header {
+//Topbar#
+#topbar {
   width: 100%;
   background-color: $base_color;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+
+  //topbar
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    //&_left
+    &_left {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $primary_color;
+          font-size: $regular_size;
+        }
+      }
+    }
+
+    //&_right
+    &_right {
+      display: flex;
+      align-items: center;
+      //&_item
+      &_item {
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .icon {
+          font-size: $regular_size;
+          color: $three_color;
+        }
+        .text {
+          padding-left: 7px;
+          font-size: $regular_size;
+          color: $three_color;
+          a {
+            font-family: $two_family;
+            font-size: $regular_size;
+            color: $three_color;
+          }
+        }
+      }
+    }
+  }
+
+  //Notebook
+  @include notebook {
+    display: none;
+  }
+}
+
+//Header#
+#header {
+  width: 100%;
 
   //header
   .header {
@@ -51,8 +115,7 @@ body {
         > a {
           font-family: $two_family;
           color: $primary_color;
-          @include weight(regular)
-          font-size: $large_size;
+          @include weight(regular) font-size: $large_size;
           text-transform: uppercase;
           position: relative;
           &::before {
@@ -290,14 +353,11 @@ body {
     }
     //&_hamburger
     &_hamburger {
-      top: 37px;
+      top: 50px;
     }
   }
 }
 
 //Home_Slider#
-#home_slider {}
-
-.div {
-  height: 2000px;
+#home_slider {
 }

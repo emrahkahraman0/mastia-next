@@ -1,5 +1,5 @@
-import "@/styles/style.css";
-import "@/styles/grid.css";
+import "/styles/style.css";
+import "/styles/grid.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Header />
+        <Header />
         <main>{children}</main>
-      <Footer />
+        <Footer />
       </body>
     </html>
   );

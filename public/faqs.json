@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Faq nedir?",
+      "answer": "Frequently Asked Questions (Sıkça Sorulan Sorular) anlamına gelir ve belirli bir konu hakkında insanların sıklıkla sorduğu soruların yanıtlarını içeren bir belgedir."
+    },
+    {
+      "id": 2,
+      "question": "Faq sayfası nasıl oluşturulur?",
+      "answer": "Bir FAQ sayfası oluşturmak için öncelikle en sık sorulan soruları belirlemeniz ve bunları açık ve anlaşılır bir şekilde yanıtlamanız gerekir. Ayrıca, sayfanızı kolayca gezinebilir hale getirmek için sorulara bağlantılar eklemeniz de önerilir."
+    },
+    {
+      "id": 3,
+      "question": "Faq sayfasında hangi tür sorular olmalıdır?",
+      "answer": "Faq sayfanızda, belirli bir konu hakkında insanların sıklıkla sorduğu soruları yanıtlamanız önerilir. Bu sorular genellikle ürünlerinizle ilgili özellikleri, fiyatları, teslimat sürelerini ve iade politikalarını kapsar."
+    },
+    {
+      "id": 4,
+      "question": "Faq sayfası nasıl oluşturulur?",
+      "answer": "Bir FAQ sayfası oluşturmak için öncelikle en sık sorulan soruları belirlemeniz ve bunları açık ve anlaşılır bir şekilde yanıtlamanız gerekir. Ayrıca, sayfanızı kolayca gezinebilir hale getirmek için sorulara bağlantılar eklemeniz de önerilir."
+    },
+    {
+      "id": 5,
+      "question": "Faq sayfası nasıl oluşturulur?",
+      "answer": "Bir FAQ sayfası oluşturmak için öncelikle en sık sorulan soruları belirlemeniz ve bunları açık ve anlaşılır bir şekilde yanıtlamanız gerekir. Ayrıca, sayfanızı kolayca gezinebilir hale getirmek için sorulara bağlantılar eklemeniz de önerilir."
+    },
+    {
+      "id": 6,
+      "question": "Faq sayfası nasıl oluşturulur?",
+      "answer": "Bir FAQ sayfası oluşturmak için öncelikle en sık sorulan soruları belirlemeniz ve bunları açık ve anlaşılır bir şekilde yanıtlamanız gerekir. Ayrıca, sayfanızı kolayca gezinebilir hale getirmek için sorulara bağlantılar eklemeniz de önerilir."
+    }
+  ]
+}
