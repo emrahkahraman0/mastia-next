@@ -336,7 +336,7 @@ body {
   position: fixed;
   transition: 0.3s all ease-in-out;
   top: 0;
-  z-index: 3;
+  z-index: 2;
   background-color: $four_color;
 
   //header
@@ -358,6 +358,321 @@ body {
   }
 }
 
-//Home_Slider#
-#home_slider {
+//Home_Services#
+#home_services {
+  width: 100%;
+  background-color: $five_color;
+  padding: 80px 0 20px 0;
+
+  //home_services
+  .home_services {
+    //&_item
+    &_item {
+      text-align: center;
+      margin-bottom: 50px;
+      .icon {
+        font-size: 50px;
+        color: $primary_color;
+      }
+      h6 {
+        padding-top: 15px;
+        color: $two_color;
+        font-family: $one_family;
+        @include weight(regular);
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: normal;
+      }
+      p {
+        padding-top: 15px;
+        font-family: $two_family;
+        @include weight(regular);
+        color: $three_color;
+        font-size: $regular_size;
+        line-height: 24px;
+      }
+
+      //Notebook
+      @include notebook {
+        h6 {
+          font-size: 22px;
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          padding-top: 10px;
+          font-size: 20px;
+        }
+        p {
+          line-height: 22px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          font-size: 18px;
+        }
+        p {
+          font-size: $small_size;
+          line-height: 18px;
+        }
+      }
+      //Small
+      @include small {
+        h6 {
+          font-size: $large_size;
+        }
+        p {
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+//Home_Counters#
+#home_counters {
+  width: 100%;
+  padding: 60px 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(34, 167, 240, 0.8),
+      rgba(34, 167, 240, 0.8)
+    ),
+    url("/1920x235.png");
+  background-position: center;
+  background-size: cover;
+
+  //home_counters
+  .home_counters {
+    text-align: center;
+    //&_item
+    &_item {
+      color: $base_color;
+      .counter {
+        font-family: $one_family;
+        @include weight(bold);
+        font-size: 50px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          right: 0;
+          width: 40px;
+          height: 2px;
+          margin: 0 auto;
+          background-color: $base_color;
+        }
+      }
+      .counter_heading {
+        padding-top: 40px;
+        font-family: $one_family;
+        @include weight(regular);
+        font-size: 26px;
+        text-transform: uppercase;
+      }
+
+      //Large
+      @include large {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      //Tablet
+      @include tablet {
+        .counter {
+          font-size: 40px;
+        }
+        .counter_heading {
+          font-size: 24px;
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        .counter {
+          font-size: 35px;
+        }
+        .counter_heading {
+          font-size: 22px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        .counter {
+          font-size: 30px;
+          &::before {
+            bottom: -12px;
+          }
+        }
+        .counter_heading {
+          padding-top: 30px;
+          font-size: $large_size;
+        }
+      }
+    }
+  }
+}
+
+//İnfo#
+#info {
+  width: 100%;
+  background-color: $two_color;
+  padding: 35px 0;
+
+  //info
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //&_text
+    &_text {
+      h6 {
+        font-family: $one_family;
+        @include weight(regular);
+        color: $base_color;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: normal;
+      }
+    }
+
+    //&_btn
+    &_btn {
+      button {
+        background-color: transparent;
+        border: 2px solid $base_color;
+        padding: 18px 40px;
+        transition: 0.3s all ease-in-out;
+        a {
+          font-family: $one_family;
+          @include weight(regular);
+          font-size: $regular_size;
+          color: $base_color;
+        }
+        &:hover {
+          background-color: $base_color;
+          cursor: pointer;
+          a {
+            color: $two_color;
+          }
+        }
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      //&_btn
+      &_btn {
+        margin-top: 25px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: 22px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h6 {
+          font-size: 18px;
+        }
+      }
+      //&_btn
+      &_btn {
+        button {
+          padding: 15px 30px;
+          a {
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Footer#
+#footer {
+  width: 100%;
+  padding: 50px 0;
+  background-color: $six_color;
+
+  //footer
+  .footer {
+    //&_item
+    &_item {
+      h6 {
+        font-family: $one_family;
+        @include weight(bold);
+        line-height: normal;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $two_color;
+        margin-bottom: 30px;
+      }
+      p {
+        font-family: $two_family;
+        @include weight(regular);
+        line-height: 21px;
+        font-size: $regular_size;
+        color: $base_color;
+      }
+      ul {
+        li {
+          display: block;
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          a {
+            font-family: $two_family;
+            text-transform: capitalize;
+            font-size: $regular_size;
+            color: $base_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Copyright#
+#copyright {
+  width: 100%;
+  background-color: $seven_color;
+  padding: 25px 0;
+
+  //text
+  .text {
+    text-align: center;
+    font-family: $two_family;
+    @include weight(regular);
+    font-size: $regular_size;
+    color: $base_color;
+    line-height: normal;
+    .icon {
+      color: #ff0000;
+    }
+  }
+
+  //Mobil
+  @include mobil {
+    .text {
+      font-size: $small_size;
+      line-height: 17px;
+    }
+  }
 }

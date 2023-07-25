@@ -8,11 +8,17 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 
 function TopBar() {
+
   return (
+
     <>
+
       <div id="topbar">
+
         <div className="container">
+
           <div className="topbar">
+
             <ul className="topbar_left">
               <li>
                 <Link href="/">
@@ -36,6 +42,7 @@ function TopBar() {
               </li>
             </ul>
             {/*topbar_left*/}
+
             <div className="topbar_right">
               <div className="topbar_right_item">
                 <div className="icon">
@@ -49,7 +56,7 @@ function TopBar() {
                   <BsFillTelephoneFill />
                 </div>
                 <div className="text">
-                  <Link href="/">+ 386 40 111 5555</Link>
+                  <Link href="tel:+ 386 40 111 5555">+ 386 40 111 5555</Link>
                 </div>
               </div>
               {/*topbar_right_item*/}
@@ -58,20 +65,26 @@ function TopBar() {
                   <BsEnvelope />
                 </div>
                 <div className="text">
-                  <Link href="/">info@yourdomain.com</Link>
+                  <Link href="mailto:info@yourdomain.com">info@yourdomain.com</Link>
                 </div>
               </div>
               {/*topbar_right_item*/}
             </div>
             {/*topbar_right*/}
+
           </div>
           {/*topbar*/}
+
         </div>
         {/*container*/}
+
       </div>
       {/*topbar#*/}
+
     </>
+
   );
+
 }
 
 export default TopBar;
