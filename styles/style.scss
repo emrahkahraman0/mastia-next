@@ -622,6 +622,12 @@ body {
   }
 }
 
+//Home_Projects#
+#home_projects {
+  width: 100%;
+  padding: 80px 0;
+}
+
 //Home_Counters#
 #home_counters {
   width: 100%;
@@ -706,6 +712,12 @@ body {
       }
     }
   }
+}
+
+//Home_Blog#
+#home_blog {
+  width: 100%;
+  padding: 80px 0;
 }
 
 //İnfo#
@@ -985,6 +997,1084 @@ body {
     .text {
       font-size: $small_size;
       line-height: 17px;
+    }
+  }
+}
+
+//Page#
+#page {
+  width: 100%;
+  background-color: $two_color;
+
+  //page
+  .page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+
+    //&_heading
+    &_heading {
+      font-family: $one_family;
+      @include weight(400);
+      text-transform: uppercase;
+      line-height: normal;
+      font-size: 24px;
+      color: $base_color;
+    }
+    //&_links
+    &_links {
+      li {
+        display: inline-block;
+        a {
+          font-family: $two_family;
+          @include weight(400);
+          font-size: $regular_size;
+          text-transform: capitalize;
+          line-height: normal;
+          color: $base_color;
+          position: relative;
+          &::before {
+            content: ">";
+            font-weight: 900;
+            font-size: $small_size;
+            display: inline-block;
+            padding: 0 5px;
+          }
+        }
+        &:first-child a::before {
+          content: none;
+        }
+      }
+    }
+
+    //X-Tablet
+    @include x-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 80px;
+      //&_heading
+      &_heading {
+        font-size: 20px;
+      }
+      //&_links
+      &_links {
+        padding-top: 10px;
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_heading
+      &_heading {
+        font-size: 18px;
+      }
+      //&_links
+      &_links {
+        li {
+          a {
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+  }
+}
+
+//About_İnfo#
+#about_info {
+  width: 100%;
+  padding: 70px 0 70px 0;
+
+  //about_info
+  .about_info {
+    //&_image
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+    //&_text
+    &_text {
+      h6 {
+        font-family: $one_family;
+        @include weight(400);
+        font-size: 35px;
+        text-transform: uppercase;
+        color: $two_color;
+        line-height: normal;
+        padding-bottom: 25px;
+      }
+      p {
+        font-family: $two_family;
+        @include weight(400);
+        color: $primary_color;
+        line-height: 25px;
+        font-size: $regular_size;
+        padding-bottom: 20px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: $two_color;
+        a {
+          font-family: $one_family;
+          @include weight(400);
+          font-size: $regular_size;
+          text-transform: uppercase;
+          color: $base_color;
+        }
+      }
+    }
+
+    //&_Notebook
+    @include notebook {
+      text-align: center;
+      //&_text
+      &_text {
+        margin-top: 30px;
+        h6 {
+          font-size: 30px;
+        }
+        button {
+          width: 100%;
+          padding: 10px 0;
+        }
+      }
+    }
+    //&_Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: 25px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+    //&_X-Tabket
+    @include x-tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+        p {
+          line-height: 22px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+    //&_Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h6 {
+          font-size: 18px;
+          padding-bottom: 10px;
+        }
+        p {
+          line-height: 16px;
+          font-size: $small_size;
+          padding-bottom: 10px;
+        }
+        button {
+          padding: 8px 0;
+          a {
+            font-size: $small_size;
+          }
+        }
+      }
+    }
+  }
+}
+
+//About_Facts#
+#about_facts {
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.8),
+      rgba(50, 50, 50, 0.8)
+    ),
+    url("/1920x420.png");
+  padding: 70px 0 70px 0;
+  background-position: center;
+  background-size: cover;
+  //Notebook
+  @include notebook {
+    padding: 70px 0 40px 0;
+  }
+
+  //about_facts
+  .about_facts {
+    text-align: center;
+    //&_item
+    &_item {
+      .icon {
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid $two_color;
+        color: $base_color;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          transform: rotate(360deg);
+        }
+      }
+      h6 {
+        padding-top: 25px;
+        line-height: normal;
+        font-family: $one_family;
+        font-size: 24px;
+        color: $base_color;
+        @include weight(400);
+        text-transform: uppercase;
+      }
+      p {
+        padding-top: 15px;
+        font-family: $two_family;
+        line-height: 23px;
+        color: $base_color;
+        @include weight(400);
+        font-size: $regular_size;
+      }
+
+      //&_Notebook
+      @include notebook {
+        margin-bottom: 30px;
+        h6 {
+          font-size: 22px;
+        }
+      }
+      //&_Tablet
+      @include tablet {
+        h6 {
+          font-size: 20px;
+        }
+      }
+      //&_X-Tablet
+      @include x-tablet {
+        h6 {
+          font-size: 18px;
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        .icon {
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+          font-size: 30px;
+        }
+        h6 {
+          padding-top: 20px;
+          font-size: $large_size;
+        }
+        p {
+          padding-top: 10px;
+          font-size: $small_size;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+//About_Choose#
+#about_choose {
+  width: 100%;
+  padding: 70px 0;
+
+  //about_choose
+  .about_choose {
+    //&_left
+    &_left {
+      h6 {
+        font-family: $one_family;
+        text-transform: uppercase;
+        @include weight(400);
+        font-size: 35px;
+        line-height: normal;
+        color: $two_color;
+        padding-bottom: 35px;
+        //Notebook
+        @include notebook {
+          font-size: 30px;
+          padding-bottom: 30px;
+        }
+        //Tablet
+        @include tablet {
+          font-size: 25px;
+          padding-bottom: 25px;
+        }
+        //X-Tablet
+        @include x-tablet {
+          font-size: 20px;
+          padding-bottom: 20px;
+        }
+        //Mobil
+        @include mobil {
+          font-size: 18px;
+        }
+      }
+      //accordion
+      .accordion {
+        //&_item
+        &_item {
+          div {
+            margin-bottom: 20px;
+          }
+          &_accordion_title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 10px;
+            font-family: $two_family;
+            color: $three_color;
+            font-size: $large_size;
+            @include weight(400);
+            text-transform: capitalize;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            &.active {
+              margin-bottom: 0;
+              background-color: $three_color;
+              color: $base_color;
+            }
+          }
+          &_accordion_arrow {
+            font-size: $large_size;
+            color: $two_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.active {
+              color: $base_color;
+            }
+          }
+          &_accordion_content {
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            font-family: $two_family;
+            color: $three_color;
+            font-size: $regular_size;
+            line-height: normal;
+            transition: max-height 0.3s ease-out;
+            border: 1px solid #ebebeb;
+
+            &.active {
+              max-height: 500px;
+              padding: 20px 15px;
+              transition: max-height 0.5s ease-in;
+            }
+          }
+        }
+        //X-Tablet
+        @include x-tablet {
+          //&_item
+          &_item {
+            &_accordion_title {
+              font-size: $regular_size;
+            }
+            &_accordion_arrow {
+              font-size: $regular_size;
+              line-height: 15px;
+            }
+          }
+        }
+        //Mobil
+        @include mobil {
+          //&_item
+          &_item {
+            &_accordion_content {
+              font-size: $small_size;
+            }
+          }
+        }
+      }
+    }
+    //&_right
+    &_right {
+      //Notebook
+      @include notebook {
+        margin-top: 30px;
+      }
+      h6 {
+        font-family: $one_family;
+        text-transform: uppercase;
+        @include weight(400);
+        font-size: 35px;
+        line-height: normal;
+        color: $two_color;
+        padding-bottom: 35px;
+        //Notebook
+        @include notebook {
+          font-size: 30px;
+          padding-bottom: 30px;
+        }
+        //Tablet
+        @include tablet {
+          font-size: 25px;
+          padding-bottom: 25px;
+        }
+        //X-Tablet
+        @include x-tablet {
+          font-size: 20px;
+          padding-bottom: 20px;
+        }
+        //Mobil
+        @include mobil {
+          font-size: 18px;
+        }
+      }
+      p {
+        font-family: $two_family;
+        @include weight(400);
+        color: $three_color;
+        font-size: $regular_size;
+        line-height: 22px;
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      //Mobil
+      @include mobil {
+        p {
+          font-size: $small_size;
+          line-height: 17px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+//About_Clients#
+#about_clients {
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.8),
+      rgba(50, 50, 50, 0.8)
+    ),
+    url("/1920x420.png");
+  padding: 70px 0 105px 0;
+  background-position: center;
+  background-size: cover;
+
+  //title
+  .title {
+    text-align: center;
+    color: $base_color;
+    @include weight(400);
+    font-size: 35px;
+    line-height: normal;
+    text-transform: uppercase;
+
+    //&_Notebook
+    @include notebook {
+      font-size: 30px;
+    }
+    //&_Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //&_X-Tablet
+    @include x-tablet {
+      font-size: 25px;
+    }
+    //&_Mobil
+    @include mobil {
+      font-size: 20px;
+    }
+  }
+
+  //abouıt_clients
+  .about_clients {
+    padding-top: 40px;
+    position: relative;
+    //&_item
+    &_item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      //clients_image
+      .clients_image {
+        padding-right: 60px;
+        width: 30%;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      //clients_text
+      .clients_text {
+        padding-left: 40px;
+        width: 70%;
+        border-left: 1px solid $base_color;
+        font-family: $two_family;
+        @include weight(400);
+        font-size: $regular_size;
+        color: $base_color;
+        p {
+          line-height: 22px;
+          letter-spacing: 0.3px;
+        }
+        h4 {
+          padding-top: 25px;
+          text-transform: capitalize;
+          line-height: normal;
+        }
+        h5 {
+          padding-top: 5px;
+          line-height: none;
+          text-transform: uppercase;
+        }
+      }
+
+      //Tablet
+      @include tablet {
+        text-align: center;
+        .clients_image {
+          padding-right: 0;
+          padding-bottom: 25px;
+          width: 100%;
+          img {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+          }
+        }
+        .clients_text {
+          width: 100%;
+          padding-left: 0;
+          padding-top: 25px;
+          border-left: none;
+          border-top: 1px solid $base_color;
+        }
+      }
+      //Mobil
+      @include mobil {
+        //clients_text
+        .clients_text {
+          font-size: $small_size;
+          h4 {
+            padding-top: 20px;
+          }
+          p {
+            line-height: 17px;
+          }
+        }
+      }
+    }
+    //owl-dots
+    .owl-dots {
+      position: absolute;
+      bottom: -5%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      .owl-dot {
+        width: 10px;
+        height: 10px;
+        background-color: $base_color;
+        border-radius: 50%;
+        transition: 0.3s all ease-in-out;
+        margin-right: 5px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .active {
+        background-color: $two_color;
+      }
+    }
+  }
+}
+
+//About_Team
+#about_team {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  //Large
+  @include large {
+    padding: 70px 0 40px 0;
+  }
+
+  //title
+  .title {
+    font-family: $one_family;
+    text-transform: uppercase;
+    @include weight(400);
+    font-size: 35px;
+    color: $two_color;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+
+    //&_Notebook
+    @include notebook {
+      font-size: 30px;
+    }
+    //&_Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //&_X-Tablet
+    @include x-tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+    //&_Mobil
+    @include mobil {
+      font-size: 20px;
+    }
+  }
+
+  //about_team
+  .about_team {
+    padding-top: 60px;
+
+    //&_item
+    &_item {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      h5 {
+        padding-top: 20px;
+        font-family: $two_family;
+        text-transform: capitalize;
+        color: $primary_color;
+        font-size: 24px;
+        line-height: normal;
+      }
+      h6 {
+        padding-top: 7px;
+        font-family: $two_family;
+        text-transform: capitalize;
+        color: $primary_color;
+        font-size: $small_size;
+        line-height: normal;
+      }
+
+      //&_Large
+      @include large {
+        margin-bottom: 30px;
+      }
+      //&_Notebook
+      @include notebook {
+        h5 {
+          font-size: 22px;
+        }
+      }
+      //&_Tablet
+      @include tablet {
+        h5 {
+          padding-top: 15px;
+          font-size: 20px;
+        }
+      }
+      //&_X-Tablet
+      @include x-tablet {
+        h5 {
+          font-size: 18px;
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        h5 {
+          font-size: $large_size;
+        }
+      }
+    }
+  }
+}
+
+///// Faqs /////
+
+//Faqs#
+#faqs {
+  width: 100%;
+  padding: 70px 0 70px 0;
+
+  //faqs
+  .faqs {
+    //&_item
+    &_item {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        background-color: $two_color;
+        font-family: $one_family;
+        @include weight(900);
+        color: $base_color;
+        cursor: pointer;
+        &_title {
+          font-size: $large_size;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        &_icon {
+          font-size: 24px;
+        }
+      }
+      &_content {
+        padding: 10px 20px;
+        background-color: $four_color;
+        font-family: $two_family;
+        @include weight(400);
+        font-size: $regular_size;
+        line-height: normal;
+      }
+
+      //Tablet
+      @include tablet {
+        //&_header
+        &_header {
+          &_title {
+            font-size: $regular_size;
+          }
+          &_icon {
+            font-size: 20px;
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //&_header
+        &_header {
+          padding: 8px;
+          &_title {
+            font-size: $small-size;
+          }
+          &_icon {
+            font-size: $large_size;
+          }
+        }
+        &_content {
+          font-size: $small-size;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+//Teams#
+#teams {
+  width: 100%;
+  padding: 70px 0 40px 0;
+
+  //teams
+  .teams {
+    text-align: center;
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+      }
+      h5 {
+        padding-top: 15px;
+        font-family: $one_family;
+        @include weight(bold);
+        font-size: $large_size;
+        text-transform: uppercase;
+        color: $two_color;
+        line-height: normal;
+      }
+      h6 {
+        padding-top: 10px;
+        font-family: $two_family;
+        text-transform: capitalize;
+        font-size: $regular_size;
+        color: $three_color;
+        line-height: normal;
+      }
+      //social
+      .social {
+        padding-top: 20px;
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color: $two_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s all ease-in-out;
+            .icon {
+              color: $base_color;
+              font-size: $regular_size;
+            }
+            &:hover {
+              background-color: $three_color;
+            }
+          }
+        }
+      }
+
+      //Mobil
+      @include mobil {
+        h5 {
+          font-size: $regular_size;
+        }
+        h6 {
+          font-size: $small_size;
+        }
+        .social {
+          li {
+            margin-right: 8px;
+            a {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Contact_Form#
+#contact_form {
+  width: 100%;
+  padding: 70px 0;
+
+  //title
+  .title {
+    font-family: $one_family;
+    text-transform: uppercase;
+    @include weight(400);
+    font-size: 35px;
+    color: $two_color;
+    line-height: normal;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+
+    //&_Notebook
+    @include notebook {
+      text-align: center;
+      font-size: 30px;
+      &::before {
+        margin: 0 auto;
+        right: 0;
+      }
+    }
+    //&_Tablet
+    @include tablet {
+      font-size: 25px;
+    }
+    //&_X-Tablet
+    @include x-tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+    //&_Mobil
+    @include mobil {
+      font-size: 20px;
+    }
+  }
+
+  //contact_form
+  .contact_form {
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+
+    //&_left
+    &_left {
+      input {
+        width: 100%;
+        background-color: transparent;
+        padding: 15px;
+        font-size: $regular_size;
+        border: 1px solid #d7d7d7;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::placeholder {
+          font-family: $two_family;
+          @include weight(light);
+          color: #575757;
+        }
+      }
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        padding: 15px;
+        font-size: $regular_size;
+        border: 1px solid #d7d7d7;
+        &::placeholder {
+          font-family: $two_family;
+          @include weight(light);
+          color: #575757;
+        }
+      }
+      button {
+        margin-top: 25px;
+        padding: 12px 30px;
+        background-color: $two_color;
+        font-family: $one_family;
+        @include weight(bold);
+        text-transform: uppercase;
+        font-size: $regular_size;
+        color: $base_color;
+        cursor: pointer;
+      }
+    }
+    //&_right
+    &_right {
+      //right_icon
+      .right_icon {
+        display: flex;
+        flex-direction: column;
+        //&_item
+        &_item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .icon {
+            font-size: 40px;
+            color: $two_color;
+          }
+          .text {
+            padding-left: 15px;
+            p {
+              color: $three_color;
+              line-height: normal;
+              font-size: $regular_size;
+            }
+            a {
+              display: block;
+              line-height: normal;
+              font-size: $regular_size;
+              color: $three_color;
+              padding-bottom: 2px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      text-align: center;
+      padding-top: 65px;
+      //&_right
+      &_right {
+        margin-top: 30px;
+        .right_icon {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      padding-top: 60px;
+      //&_right
+      &_right {
+        .right_icon {
+          &_item {
+            display: flex;
+            flex-direction: column;
+            .text {
+              padding: 8px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      padding-top: 55px;
+      //&_left
+      &_left {
+        input {
+          font-size: $small_size;
+        }
+        button {
+          font-size: $small_size;
+        }
+      }
+      //&_right
+      &_right {
+        .right_icon {
+          &_item {
+            .icon {
+              font-size: 35px;
+            }
+            .text {
+              a,
+              p {
+                font-size: $small_size;
+              }
+              a {
+                padding-bottom: 1px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

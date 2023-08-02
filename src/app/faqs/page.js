@@ -1,4 +1,5 @@
 "use client";
+import Pages from "@/src/templates/Pages";
 import { useState, useEffect } from "react";
 
 function FaqItem({ title, content }) {
@@ -28,6 +29,7 @@ function Faqs() {
   }, []);
   return (
     <>
+      <Pages />
       <div id="faqs">
         <div className="container">
           <div className="faqs">

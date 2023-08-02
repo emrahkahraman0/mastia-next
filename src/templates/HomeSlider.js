@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import SliderImage from "public/1920x750.png";
 import dynamic from "next/dynamic";
-import React from "react";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,

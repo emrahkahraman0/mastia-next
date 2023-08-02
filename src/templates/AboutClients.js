@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import dynamic from "next/dynamic";
 import Clientİmg from "@/public/140x140.png";
 import Image from "next/image";
@@ -54,8 +53,8 @@ function AboutClients() {
             loop
             items={1}
             margin={0}
-            nav={true}
-            dots={false}
+            nav={false}
+            dots={true}
             autoplay={true}
             autoplayHoverPause={true}
             autoplayTimeout={5000}

@@ -5,10 +5,12 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Pages from "@/src/templates/Pages";
 
 function Teams() {
   return (
     <>
+      <Pages />
       <div id="teams">
         <div className="container">
           <div className="teams row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">

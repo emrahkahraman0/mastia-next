@@ -5,6 +5,7 @@ import { FaMapMarkedAlt, FaMapSigns } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdShare } from "react-icons/md";
+import Pages from "@/src/templates/Pages";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -18,6 +19,7 @@ function Contact() {
   };
   return (
     <>
+      <Pages />
       <div id="contact_form">
         <div className="container">
           <h6 className="title">contact us</h6>
