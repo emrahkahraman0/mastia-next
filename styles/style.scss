@@ -626,6 +626,119 @@ body {
 #home_projects {
   width: 100%;
   padding: 80px 0;
+
+  //title
+  .title {
+    color: $two_color;
+    text-transform: uppercase;
+    font-family: $one_family;
+    @include weight(medium);
+    font-size: 35px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+    //Notebook
+    @include notebook {
+      text-align: center;
+      font-size: 30px;
+      &::before {
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    //Tablet
+    @include tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -13px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      font-size: 22px;
+    }
+    //Mobil
+    @include mobil {
+      font-size: 18px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+  }
+
+  //home_projects
+  .home_projects {
+    padding-top: 60px;
+    position: relative;
+    //&_item
+    &_item {
+      position: relative;
+      //caption
+      .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 157, 216, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $base_color;
+        font-size: 35px;
+        transition: 0.3s all ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:hover {
+        .caption {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    //owl-nav
+    .owl-nav {
+      position: absolute;
+      bottom: -38px;
+      right: 0;
+      .owl-prev,
+      .owl-next {
+        width: 22px;
+        height: 22px;
+        background-color: $two_color;
+        text-align: center;
+        color: $base_color;
+      }
+      .owl-prev {
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .owl-next {
+        margin-left: 10px;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 50%;
+          right: 50%;
+          transform: translate(50%, 50%);
+        }
+      }
+    }
+  }
 }
 
 //Home_Counters#
@@ -718,6 +831,171 @@ body {
 #home_blog {
   width: 100%;
   padding: 80px 0;
+
+  //title
+  .title {
+    color: $two_color;
+    text-transform: uppercase;
+    font-family: $one_family;
+    @include weight(medium);
+    font-size: 35px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 70px;
+      height: 2px;
+      background-color: $two_color;
+    }
+    //Notebook
+    @include notebook {
+      text-align: center;
+      font-size: 30px;
+      &::before {
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    //Tablet
+    @include tablet {
+      font-size: 25px;
+      &::before {
+        bottom: -13px;
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      font-size: 22px;
+    }
+    //Mobil
+    @include mobil {
+      font-size: 18px;
+      &::before {
+        bottom: -10px;
+      }
+    }
+  }
+
+  //home_blog
+  .home_blog {
+    padding-top: 60px;
+    position: relative;
+    //&_item
+    &_item {
+      display: flex;
+      flex-wrap: wrap;
+      .blog_image {
+        width: 40%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      }
+      .blog_desc {
+        width: 60%;
+        background-color: $five_color;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        .date {
+          font-family: $two_family;
+          font-style: italic;
+          color: $three_color;
+          line-height: normal;
+          font-size: $regular_size;
+        }
+        p {
+          padding-top: 10px;
+          font-family: $two_family;
+          color: $three_color;
+          @include weight(regular);
+          line-height: 20px;
+          font-size: $regular_size;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /*Kaç Stırda sınırlamak istiyorsanız */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .read_more {
+          margin-top: 30px;
+          font-family: $two_family;
+          color: $two_color;
+          font-size: $regular_size;
+          text-transform: uppercase;
+          @include weight(bold);
+          display: flex;
+          align-self: flex-end;
+        }
+      }
+      //Notebook
+      @include notebook {
+        //blog_image
+        .blog_image {
+          width: 100%;
+        }
+        //blog_desc
+        .blog_desc {
+          width: 100%;
+        }
+      }
+      //Mobil
+      @include mobil {
+        //blog_desc
+        .blog_desc {
+          padding: 20px 15px;
+          .date {
+            font-size: $small-size;
+          }
+          p {
+            font-size: $small-size;
+            line-height: 16px;
+          }
+          .read_more {
+            margin-top: 20px;
+            font-size: $small-size;
+          }
+        }
+      }
+    }
+    //owl-nav
+    .owl-nav {
+      position: absolute;
+      bottom: -38px;
+      right: 0;
+      .owl-prev,
+      .owl-next {
+        width: 22px;
+        height: 22px;
+        background-color: $two_color;
+        text-align: center;
+        color: $base_color;
+      }
+      .owl-prev {
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .owl-next {
+        margin-left: 10px;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 50%;
+          right: 50%;
+          transform: translate(50%, 50%);
+        }
+      }
+    }
+  }
 }
 
 //İnfo#
@@ -1000,6 +1278,8 @@ body {
     }
   }
 }
+
+///// About /////
 
 //Page#
 #page {
@@ -1715,6 +1995,28 @@ body {
   }
 }
 
+///// Services /////
+
+//Services#
+#services {
+  width: 100%;
+  padding: 80px 0 50px 0;
+
+  //services
+  .services {
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 ///// Faqs /////
 
 //Faqs#
@@ -1792,6 +2094,8 @@ body {
     }
   }
 }
+
+///// Teams /////
 
 //Teams#
 #teams {
@@ -1875,6 +2179,8 @@ body {
     }
   }
 }
+
+///// Contact /////
 
 //Contact_Form#
 #contact_form {

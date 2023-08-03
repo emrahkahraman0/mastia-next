@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProjectImage from "public/360x240.png";
 import dynamic from "next/dynamic";
+import { FiZoomIn } from "react-icons/fi";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
@@ -61,13 +62,49 @@ function HomeProjects() {
             autoplayTimeout={5000}
             responsive={responsive}
           >
-            <div className="home_projects_item">
+            <Link href="/" className="home_projects_item">
               <Image
                 className="img_fluid"
                 src={ProjectImage}
-                alt="Slider İmage"
+                alt="Project İmage"
               />
-            </div>
+              <div className="caption">
+                <FiZoomIn />
+              </div>
+            </Link>
+            {/*home_projects_item*/}
+            <Link href="/" className="home_projects_item">
+              <Image
+                className="img_fluid"
+                src={ProjectImage}
+                alt="Project İmage"
+              />
+              <div className="caption">
+                <FiZoomIn />
+              </div>
+            </Link>
+            {/*home_projects_item*/}
+            <Link href="/" className="home_projects_item">
+              <Image
+                className="img_fluid"
+                src={ProjectImage}
+                alt="Project İmage"
+              />
+              <div className="caption">
+                <FiZoomIn />
+              </div>
+            </Link>
+            {/*home_projects_item*/}
+            <Link href="/" className="home_projects_item">
+              <Image
+                className="img_fluid"
+                src={ProjectImage}
+                alt="Project İmage"
+              />
+              <div className="caption">
+                <FiZoomIn />
+              </div>
+            </Link>
             {/*home_projects_item*/}
           </OwlCarousel>
           {/*home_projects*/}

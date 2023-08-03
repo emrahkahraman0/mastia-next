@@ -21,13 +21,13 @@ const responsive = {
     items: 1,
   },
   575: {
-    items: 1,
+    items: 2,
   },
   768: {
-    items: 1,
+    items: 2,
   },
   992: {
-    items: 1,
+    items: 2,
   },
   1200: {
     items: 2,
@@ -62,7 +62,51 @@ function HomeBlog() {
             responsive={responsive}
           >
             <div className="home_blog_item">
-              <Image className="img_fluid" src={BlogImage} alt="Slider İmage" />
+              <div className="blog_image">
+                <Image className="img_fluid" src={BlogImage} alt="Blog İmage" />
+              </div>
+              <div className="blog_desc">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be
+                </p>
+                <Link className="read_more" href="/">
+                  read more
+                </Link>
+              </div>
+            </div>
+            {/*home_blog_item*/}
+            <div className="home_blog_item">
+              <div className="blog_image">
+                <Image className="img_fluid" src={BlogImage} alt="Blog İmage" />
+              </div>
+              <div className="blog_desc">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be
+                </p>
+                <Link className="read_more" href="/">
+                  read more
+                </Link>
+              </div>
+            </div>
+            {/*home_blog_item*/}
+            <div className="home_blog_item">
+              <div className="blog_image">
+                <Image className="img_fluid" src={BlogImage} alt="Blog İmage" />
+              </div>
+              <div className="blog_desc">
+                <div className="date">23 oct 2015</div>
+                <p>
+                  Dummy text is text that is used in theublish industry or by
+                  web designers to occupy the space which will later be
+                </p>
+                <Link className="read_more" href="/">
+                  read more
+                </Link>
+              </div>
             </div>
             {/*home_blog_item*/}
           </OwlCarousel>
