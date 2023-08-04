@@ -1,14 +1,10 @@
-"use client";
 import "/styles/style.css";
 import "/styles/grid.css";
 import Header from "../components/Header";
 import İnfo from "../components/İnfo";
 import Footer from "../components/Footer";
-import { usePathname } from "next/navigation";
 
 export const metadata = {
-  title: "MASTİA{pathname}",
-  description: "Next.js Developer",
   icons: {
     icon: "/favicon.png",
   },
