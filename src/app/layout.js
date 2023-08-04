@@ -5,6 +5,8 @@ import İnfo from "../components/İnfo";
 import Footer from "../components/Footer";
 
 export const metadata = {
+  title: "MASTİA",
+  description: "Next.js Developer",
   icons: {
     icon: "/favicon.png",
   },
