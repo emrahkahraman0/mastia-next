@@ -109,7 +109,9 @@ function Header() {
                 <ul className="dropdown">
                   <li>
                     <Link
-                      className={currentRoute === "/services" ? "active" : ""}
+                      className={
+                        currentRoute === "/services/services-1" ? "active" : ""
+                      }
                       href="/services/services-1"
                     >
                       Services-1
@@ -117,7 +119,9 @@ function Header() {
                   </li>
                   <li>
                     <Link
-                      className={currentRoute === "/services" ? "active" : ""}
+                      className={
+                        currentRoute === "/services/services-2" ? "active" : ""
+                      }
                       href="/services/services-2"
                     >
                       Services-2
@@ -135,7 +139,9 @@ function Header() {
                 <ul className="dropdown">
                   <li>
                     <Link
-                      className={currentRoute === "/projects" ? "active" : ""}
+                      className={
+                        currentRoute === "/projects/projects-1" ? "active" : ""
+                      }
                       href="/projects/projects-1"
                     >
                       Projects-1
@@ -143,7 +149,9 @@ function Header() {
                   </li>
                   <li>
                     <Link
-                      className={currentRoute === "/projects" ? "active" : ""}
+                      className={
+                        currentRoute === "/projects/projects-2" ? "active" : ""
+                      }
                       href="/projects/projects-2"
                     >
                       Projects-2
@@ -161,7 +169,9 @@ function Header() {
                 <ul className="dropdown">
                   <li>
                     <Link
-                      className={currentRoute === "/blog" ? "active" : ""}
+                      className={
+                        currentRoute === "/blog/blog-1" ? "active" : ""
+                      }
                       href="/blog/blog-1"
                     >
                       Blog-1
@@ -169,7 +179,9 @@ function Header() {
                   </li>
                   <li>
                     <Link
-                      className={currentRoute === "/blog" ? "active" : ""}
+                      className={
+                        currentRoute === "/blog/blog-2" ? "active" : ""
+                      }
                       href="/blog/blog-2"
                     >
                       Blog-2
