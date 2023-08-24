@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
 import { FaMapMarkedAlt, FaMapSigns } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -8,15 +7,6 @@ import { MdShare } from "react-icons/md";
 import Pages from "@/src/templates/Pages";
 
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-    // Burada form verileri ile yapmak istediğiniz işlemleri gerçekleştirebilirsiniz
-  };
   return (
     <>
       <Pages />
@@ -25,28 +15,10 @@ function Contact() {
           <h6 className="title">contact us</h6>
 
           <div className="contact_form row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">
-            <form className="contact_form_left" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                value={name}
-                placeholder="Name"
-                onChange={event => setName(event.target.value)}
-                required
-              />
-              <input
-                type="email"
-                value={email}
-                placeholder="Your E-Mail"
-                onChange={event => setEmail(event.target.value)}
-                required
-              />
-              <textarea
-                value={message}
-                placeholder="Your Message"
-                rows={8}
-                onChange={event => setMessage(event.target.value)}
-                required
-              />
+            <form className="contact_form_left">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="E-Mail" />
+              <textarea placeholder="Messages" rows={10} />
               <button type="submit">send</button>
             </form>
             {/*contact_form_left*/}

@@ -2426,6 +2426,7 @@ body {
         background-color: transparent;
         padding: 15px;
         font-size: $regular_size;
+        resize: none;
         border: 1px solid #d7d7d7;
         &::placeholder {
           font-family: $two_family;
@@ -2466,12 +2467,14 @@ body {
           .text {
             padding-left: 15px;
             p {
+              font-family: $one_family;
               color: $three_color;
               line-height: normal;
               font-size: $regular_size;
             }
             a {
               display: block;
+              font-family: $one_family;
               line-height: normal;
               font-size: $regular_size;
               color: $three_color;
