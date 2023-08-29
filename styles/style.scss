@@ -2167,17 +2167,45 @@ body {
   }
 }
 
+///// Projects /////
+
+//Proejcts#
+#projects {
+  width: 100%;
+  padding: 80px 0 80px 0;
+
+  //projects
+  .projects {
+    //&_item
+    &_item {
+    }
+  }
+}
+
+//Projects_Details#
+#projects_details {
+  width: 100%;
+  padding: 80px 0 80px 0;
+}
+
 ///// Blog /////
 
 //Blog#
 #blog {
   width: 100%;
-  padding: 80px 0 80px 0;
+  padding: 80px 0 50px 0;
 
   //blog
   .blog {
     //&_item
     &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
 }
