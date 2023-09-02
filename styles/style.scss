@@ -2206,6 +2206,137 @@ body {
       img {
         width: 100%;
       }
+      h6 {
+        padding-top: 15px;
+        a {
+          font-family: $one_family;
+          text-transform: capitalize;
+          font-size: 20px;
+          color: $two_color;
+          @include weight(semi-bold);
+        }
+      }
+      p {
+        padding-top: 15px;
+        font-family: $two_family;
+        font-size: $regular_size;
+        line-height: 21px;
+        color: $three_color;
+      }
+      .read_more {
+        margin-top: 20px;
+        display: inline-block;
+        background-color: $two_color;
+        padding: 10px 25px;
+        color: $base_color;
+        text-transform: uppercase;
+        font-family: $one_family;
+        font-size: $regular_size;
+      }
+
+      //Notebook
+      @include notebook {
+        h6 {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        h6 {
+          a {
+            font-size: $large_size;
+          }
+        }
+        p {
+          padding-top: 13px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          a {
+            font-size: $regular-size;
+          }
+        }
+        p {
+          padding-top: 10px;
+          font-size: $small-size;
+          line-height: 17px;
+        }
+        .read_more {
+          padding: 10px 20px;
+          font-size: $small-size;
+        }
+      }
+    }
+  }
+}
+
+//Blog_Detail#
+#blog_detail {
+  width: 100%;
+  padding: 80px 0 80px 0;
+
+  //blog_detail
+  .blog_detail {
+    //&_image
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+    //&_text
+    &_text {
+      h6 {
+        font-family: $one_family;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: $two_color;
+        @include weight(semi-bold);
+      }
+      p {
+        padding-top: 25px;
+        font-family: $two_family;
+        font-size: $regular_size;
+        line-height: 21px;
+        color: $three_color;
+      }
+    }
+
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        margin-top: 30px;
+        h6 {
+          font-size: 18px;
+        }
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $large_size;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $regular_size;
+        }
+        p {
+          padding-top: 20px;
+          font-size: $small-size;
+          line-height: 17px;
+        }
+      }
     }
   }
 }

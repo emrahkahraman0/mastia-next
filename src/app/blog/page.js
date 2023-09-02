@@ -13,7 +13,7 @@ function Blog() {
             <div className="blog_item">
               <Image className="img_fluid" src={Blogİmg} alt="Blog İmage" />
               <h6>
-                <Link href="/">Blog One</Link>
+                <Link href="/blog/blog-1">Blog One</Link>
               </h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -22,7 +22,75 @@ function Blog() {
                 voluptatem dignissimos exercitationem in possimus maiores
                 incidunt.
               </p>
-              <Link className="read_more" href="/">
+              <Link className="read_more" href="/blog/blog-1">
+                read more
+              </Link>
+            </div>
+            {/*blog_item*/}
+            <div className="blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Blog İmage" />
+              <h6>
+                <Link href="/blog/blog-2">Blog Two</Link>
+              </h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio nobis neque, corporis minima nisi, nostrum, impedit
+                ullam laboriosam laborum deserunt quo doloribus officia
+                voluptatem dignissimos exercitationem in possimus maiores
+                incidunt.
+              </p>
+              <Link className="read_more" href="/blog/blog-2">
+                read more
+              </Link>
+            </div>
+            {/*blog_item*/}
+            <div className="blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Blog İmage" />
+              <h6>
+                <Link href="/blog/blog-1">Blog One</Link>
+              </h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio nobis neque, corporis minima nisi, nostrum, impedit
+                ullam laboriosam laborum deserunt quo doloribus officia
+                voluptatem dignissimos exercitationem in possimus maiores
+                incidunt.
+              </p>
+              <Link className="read_more" href="/blog/blog-1">
+                read more
+              </Link>
+            </div>
+            {/*blog_item*/}
+            <div className="blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Blog İmage" />
+              <h6>
+                <Link href="/blog/blog-2">Blog Two</Link>
+              </h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio nobis neque, corporis minima nisi, nostrum, impedit
+                ullam laboriosam laborum deserunt quo doloribus officia
+                voluptatem dignissimos exercitationem in possimus maiores
+                incidunt.
+              </p>
+              <Link className="read_more" href="/blog/blog-2">
+                read more
+              </Link>
+            </div>
+            {/*blog_item*/}
+            <div className="blog_item">
+              <Image className="img_fluid" src={Blogİmg} alt="Blog İmage" />
+              <h6>
+                <Link href="/blog/blog-1">Blog One</Link>
+              </h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio nobis neque, corporis minima nisi, nostrum, impedit
+                ullam laboriosam laborum deserunt quo doloribus officia
+                voluptatem dignissimos exercitationem in possimus maiores
+                incidunt.
+              </p>
+              <Link className="read_more" href="/blog/blog-1">
                 read more
               </Link>
             </div>
