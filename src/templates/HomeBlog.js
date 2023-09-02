@@ -71,7 +71,7 @@ function HomeBlog() {
                   Dummy text is text that is used in theublish industry or by
                   web designers to occupy the space which will later be
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href="/blog/blog-1">
                   read more
                 </Link>
               </div>
@@ -87,7 +87,7 @@ function HomeBlog() {
                   Dummy text is text that is used in theublish industry or by
                   web designers to occupy the space which will later be
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href="/blog/blog-2">
                   read more
                 </Link>
               </div>
@@ -103,7 +103,7 @@ function HomeBlog() {
                   Dummy text is text that is used in theublish industry or by
                   web designers to occupy the space which will later be
                 </p>
-                <Link className="read_more" href="/">
+                <Link className="read_more" href="/blog/blog-1">
                   read more
                 </Link>
               </div>
